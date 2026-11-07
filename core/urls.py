@@ -26,6 +26,7 @@ urlpatterns = [
     path('contacts/', include('page_contacts.urls')),
     path('faq/', include('page_faq.urls')),
     path('blog/', include('page_blog.urls')),
+    path('portfolio/', include('page_portfolio.urls')),
 ]
 
 if settings.DEBUG:
