@@ -24,6 +24,8 @@ urlpatterns = [
     path('', include('page_home.urls')),
     path('about/', include('page_about.urls')),
     path('contacts/', include('page_contacts.urls')),
+    path('faq/', include('page_faq.urls')),
+    path('blog/', include('page_blog.urls')),
 ]
 
 if settings.DEBUG:

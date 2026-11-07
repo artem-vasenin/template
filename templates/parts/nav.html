@@ -23,14 +23,21 @@
             class="nav-link{% if request.resolver_match.view_name == 'contacts:view' %} active{% endif %}"
              {% if request.resolver_match.view_name == 'contacts:view' %}aria-current="page"{% endif %}>Контакты</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item">
+          <a href="{% url 'faq:view' %}"
+            class="nav-link{% if request.resolver_match.view_name == 'faq:view' %} active{% endif %}"
+             {% if request.resolver_match.view_name == 'faq:view' %}aria-current="page"{% endif %}>Вопросы</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown"
              aria-expanded="false">Blog</a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-            <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-            <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+            <li>
+              <a class="dropdown-item" href="{% url 'blog:list' %}">Новости</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{% url 'blog:view' slug="some" %}">Новость</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item dropdown">

@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'page_home',
     'page_about',
     'page_contacts',
+    'page_faq',
+    'page_blog',
 ]
 
 MIDDLEWARE = [
