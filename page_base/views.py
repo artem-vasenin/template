@@ -3,6 +3,6 @@ from django.views import View
 from django.http import HttpResponse, HttpRequest
 
 class PageView(View):
-    """ Контроллер страницы о нас"""
+    """ Контроллер базовой страницы"""
     def get(self, request: HttpRequest) -> HttpResponse:
-        return render(request, 'page_about/index.html')
+        return render(request, 'page_base/index.html')

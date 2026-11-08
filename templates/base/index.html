@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block meta %}<!-- Custom META -->{% endblock %}
   <link id="favicon-icon" rel="shortcut icon" type="image/svg+xml" href="{% static '/img/favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'bootstrap-icons/bootstrap-icons.css' %}">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
   <!-- Main CSS -->
   <link rel="stylesheet" href="{% static '/css/main.css' %}">
+  {% block css %}<!-- Custom CSS -->{% endblock %}
   <title>{% block title %}Title{% endblock %}</title>
 </head>
 <body class="d-flex flex-column h-100">
@@ -30,5 +33,6 @@
 <!-- JS -->
 <script src="{% static '/js/bootstrap.min.js' %}"></script>
 <script src="{% static '/js/main.js' %}"></script>
+{% block js %}<!-- Custom JS -->{% endblock %}
 </body>
 </html>

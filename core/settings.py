@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'page_home',
-    'page_about',
+    'page_base',
     'page_contacts',
     'page_faq',
     'page_blog',
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -137,3 +137,8 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# CSRF_COOKIE_SECURE: Требует безопасного соединения (HTTPS) для куки CSRF. Должно быть True в продакшене.
+# SESSION_COOKIE_SECURE: Требует безопасного соединения (HTTPS) для сессионных куки. Должно быть True в продакшене.
+# SECURE_SSL_REDIRECT: Перенаправляет все HTTP-запросы на HTTPS. Должно быть True в продакшене.
+# SECURE_HSTS_SECONDS: Время в секундах, в течение которого браузер должен использовать только HTTPS для соединения с сайтом (HTTP Strict Transport Security).
